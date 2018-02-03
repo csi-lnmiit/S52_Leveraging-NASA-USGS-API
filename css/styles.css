@@ -32,3 +32,32 @@
     border-radius: 0;
     margin: 0;
 }
+
+.logIn-button{
+    background-color: #283593;
+    position: absolute;
+    z-index: 1;
+    color: #fcfcfe;
+    box-shadow: 5px 0 20px grey;
+    border: none;
+    transition: all ease-in-out 0.5s;
+}
+
+.logIn-button:hover{
+    background-color: #283593;
+    opacity: 0.8;
+    color: #fcfcfe;
+}
+
+.signUp-button{
+    background-color: transparent;
+    border: 1px solid #fcfcfe;
+    border-radius: 0;
+    color: #fcfcfe;
+    transition: all ease-out 0.5s;
+}
+
+.signUp-button:hover{
+    background-color: #fcfcfe;
+    color: #999ede;
+}
