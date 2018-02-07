@@ -17,5 +17,5 @@ app.get("/login", function(req, res){
 });
 
 app.listen(app.get("port"), function(){
-   console.log("Server has started at PORT:3000. Enter the following address to view: 0.0.0:3000/")
+   console.log("Server has started at PORT:5000. Enter http://127.0.0.1:5000 or http://localhost:5000 to view")
 });
