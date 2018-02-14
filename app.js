@@ -42,5 +42,5 @@ app.post("/authenticateUser", function(req, res){
  });
 
 app.listen(app.get("port"), function(){
-   console.log("Server has started at PORT:5000. Enter the following address to view: localhost:5000/")
+   console.log("Server has started at PORT:5000. Enter http://127.0.0.1:5000 or http://localhost:5000 to view")
 });
