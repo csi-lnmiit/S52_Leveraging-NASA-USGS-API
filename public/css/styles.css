@@ -29,12 +29,30 @@
     text-align: center;
 }
 
-.content-home>.ui.header, p, i{
+.content-home>.ui.header, .content-home>p, .content-home>i{
     color: #fff;
+}
+
+.content-home>.ui.header{
+    font-size: 5em;
+}
+
+.content-home> p{
+    font-size: 1.5em;
 }
 
 .ui.segment{
     background: #fff !important;
+    /*padding: 1em !important;*/
+    text-align: center;
+}
+
+.ui.segment>.header, .ui.segment>.more-content{
+    padding: 1em 0;
+}
+
+.more-content i{
+    margin: 0.5em !important;
 }
 /* ====================== LOGIN FORM STYLES ==================== */
 
@@ -109,8 +127,10 @@ button{
 /* ================== FOOTER STYLES =================== */
 .footer{
     padding: 4em 0 !important;
+    margin: 0 !important;
 }
 
 .footer .grid .column{
     text-align: center;
 }
+
