@@ -1,3 +1,43 @@
+/* ======================== HOME STYLES ==================== */
+
+.background{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-color: #0f0f0f;
+}
+
+.overlay{
+    position: absolute;
+    background-color: #0f0f0f;
+    opacity: 0.35;
+    z-index: -1;
+}
+
+.home{
+    margin:0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.content-home{
+    text-align: center;
+}
+
+.content-home>.ui.header, p, i{
+    color: #fff;
+}
+
+.ui.segment{
+    background: #fff !important;
+}
+/* ====================== LOGIN FORM STYLES ==================== */
+
 .main-content{
     background-color: #5356ad;
     height: 90%;
@@ -5,7 +45,6 @@
 
 .signUp-content{
     background-color: #999ede;
-
     position: absolute;
     width: 30%;
     padding: 7em 0 7em 2em;
@@ -28,11 +67,6 @@
 
 .col-sm-12 h3{
     color: #fcfcfe;
-}
-
-.navbar-inverse{
-    border-radius: 0;
-    margin: 0;
 }
 
 .logIn-button{
@@ -70,4 +104,13 @@
 
 button{
     margin-top: 10%;
+}
+
+/* ================== FOOTER STYLES =================== */
+.footer{
+    padding: 4em 0 !important;
+}
+
+.footer .grid .column{
+    text-align: center;
 }
