@@ -39,6 +39,7 @@ app.get("/dashboard", function(req, res){
     res.render("dashboard");
     console.log("Authentication success, reached dashboard route!");
 });
+
 //================
 //Authenticate routes
 //================
@@ -46,6 +47,22 @@ app.get("/dashboard", function(req, res){
 app.get("/register", function(req, res){
     res.render("register");
     console.log("Register route!");
+});
+
+//handles signup logic
+app.post("/register", function(req, res){
+    var newUser = new User({username: req.body.username});
+    User.register(newUser, req.body.password, function(err, user){
+        if(err) {
+            console.log(err);
+            return res.redirect("/register");
+            }
+            //authenticating signed up user to login
+            passport.authenticate("local")(req, res, function(){
+                res.redirect("/dashboard");
+            });
+    });
+    console.log("Register POST route!");
 });
 
 //show login form
@@ -60,6 +77,12 @@ app.post("/login", passport.authenticate("local",{
     failureRedirect: "/login"
 }), function(req, res){
     console.log("Login POST route!");
+});
+
+//Logout route
+app.get("/logout", function(req, res){
+   req.logout();
+   res.redirect("/");
 });
 
 app.listen(app.get("port"), function(){
