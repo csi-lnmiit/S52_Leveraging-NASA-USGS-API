@@ -4,6 +4,7 @@ var express = require("express"),
     mongoose = require("mongoose"),
     passport = require("passport"),
     LocalStrategy = require("passport-local");
+    User = require("./models/user");
 
 mongoose.connect("mongodb://localhost/CSI_app");
 app.use(bodyParser.urlencoded({extended: true}));
@@ -28,18 +29,37 @@ passport.deserializeUser(User.deserializeUser());
 
 app.get("/", function(req, res){
     res.render("landing");
-    console.log("Home!");
+    console.log("Home route!");
+});
+
+//================
+//Dashboard route
+//================
+app.get("/dashboard", function(req, res){
+    res.render("dashboard");
+    console.log("Authentication success, reached dashboard route!");
+});
+//================
+//Authenticate routes
+//================
+//show signup form
+app.get("/register", function(req, res){
+    res.render("register");
+    console.log("Register route!");
 });
 
 //show login form
 app.get("/login", function(req, res){
     res.render("login");
-    console.log("Login!");
+    console.log("Login route!");
 });
 
 //login authenticate logic
-app.post("/login", function(req, res){
-   res.send("Post Route reached");
+app.post("/login", passport.authenticate("local",{
+    successRedirect: "/dashboard",
+    failureRedirect: "/login"
+}), function(req, res){
+    console.log("Login POST route!");
 });
 
 app.listen(app.get("port"), function(){
