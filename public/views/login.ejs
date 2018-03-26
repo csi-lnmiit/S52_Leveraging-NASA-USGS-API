@@ -1,30 +1,20 @@
 <% include partials/LayoutHeader %>
 <% include partials/Navbar %>
-        <div class="main-content">
-            <div class="signUp-content">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <h3>Don't have an account?</h3>
-                        <button type="button" class="btn signUp-button">Sign up</button>
-                    </div>
+<div class="wrap">
+    <div class="item">
+        <div class="ui main text ">
+            <div class="ui huge header">Login !</div>
+            <form class="ui form" action="/login" method="POST">
+                <div class="field">
+                    <input type="text" placeholder="User Name" name="username">
                 </div>
-            </div>
-            <div class="logIn-content">
-                <div class="row">
-                    <div class="col-md-12">
-                        <form action="/authenticateUser" method="post">
-                            <div class="form-group">
-                                <label for="email"></label>
-                                <input type="email" class="form-control" id="email" placeholder="Email" name="email">
-                            </div>
-                            <div class="form-group">
-                                <label for="pwd"></label>
-                                <input type="password" class="form-control" id="pwd" placeholder="Password" name="pwd">
-                            </div>
-                            <button type="submit" class="btn btn-md btn-default logIn-button">Log In</button>
-                        </form>
-                    </div>
+                <div class="field">
+                    <input type="password" placeholder="password" name="password">
                 </div>
-            </div>
+
+                <input class="ui violet big basic button" type="submit">
+            </form>
         </div>
+    </div>
+</div>
 <% include partials/LayoutFooter %>

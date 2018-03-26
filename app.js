@@ -1,11 +1,14 @@
-var express = require("express");
-var app = express();
-var bodyParser = require("body-parser");
-app.use(bodyParser.urlencoded({extended: true}));
+var express = require("express"),
+    app = express(),
+    bodyParser = require("body-parser"),
+    mongoose = require("mongoose"),
+    passport = require("passport"),
+    LocalStrategy = require("passport-local");
 
+mongoose.connect("mongodb://localhost/CSI_app");
+app.use(bodyParser.urlencoded({extended: true}));
 app.set('port', (process.env.PORT || 5000));
-app.use(express.static('public'));
-app.set('views', __dirname + '/public/views');
+app.use('views', __dirname + '/public');
 app.set('view engine', 'ejs');
 
 var user = [{
@@ -14,13 +17,18 @@ var user = [{
 }]
 
 app.get("/", function(req, res){
-    res.render("index");
+    res.render("landing");
     console.log("Home!");
 });
-
+//show login form
 app.get("/login", function(req, res){
     res.render("login");
     console.log("Login!");
+});
+
+//login authenticate logic
+app.post("/login", function(req, res){
+   res.send("Post Route reached");
 });
 
 app.post("/authenticateUser", function(req, res){

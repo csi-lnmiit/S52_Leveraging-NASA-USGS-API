@@ -1,136 +1,18 @@
-/* ======================== HOME STYLES ==================== */
-
-.background{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-    background-color: #0f0f0f;
-}
-
-.overlay{
-    position: absolute;
-    background-color: #0f0f0f;
-    opacity: 0.35;
-    z-index: -1;
-}
-
-.home{
-    margin:0;
-    padding: 0;
-    height: 100%;
+/*================*/
+/*Login Styles*/
+/*================*/
+.wrap{
+    height: 80%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: transparent;
 }
 
-.content-home{
-    text-align: center;
-}
-
-.content-home>.ui.header, .content-home>p, .content-home>i{
-    color: #fff;
-}
-
-.content-home>.ui.header{
-    font-size: 5em;
-}
-
-.content-home> p{
-    font-size: 1.5em;
-}
-
-.ui.segment{
-    background: #fff !important;
-    /*padding: 1em !important;*/
-    text-align: center;
-}
-
-.ui.segment>.header, .ui.segment>.more-content{
-    padding: 1em 0;
-}
-
-.more-content i{
-    margin: 0.5em !important;
-}
-/* ====================== LOGIN FORM STYLES ==================== */
-
-.main-content{
-    background-color: #5356ad;
-    height: 90%;
-}
-
-.signUp-content{
-    background-color: #999ede;
-    position: absolute;
+.item{
     width: 30%;
-    padding: 7em 0 7em 2em;
-    left: 45%;
-    top: 26%;
-    z-index: 1;
-    text-align: center;
+    /*flex-basis: auto;*/
+    align-self: center;
 }
 
-
-.logIn-content{
-    background-color: #fff;
-    position: absolute;
-    padding: 10.5em 2em;
-    left: 25%;
-    top: 20%;
-    width: 23%;
-    z-index: 2;
+.field{
+    /*width: 40%;*/
 }
-
-.col-sm-12 h3{
-    color: #fcfcfe;
-}
-
-.logIn-button{
-    background-color: #283593;
-    padding: 10px 25px;
-    font-size: 1.2em;
-    position: absolute;
-    z-index: 1;
-    color: #fcfcfe;
-    box-shadow: 5px 0 20px grey;
-    border: none;
-    transition: all ease-in-out 0.5s;
-}
-
-.logIn-button:hover{
-    background-color: #283593;
-    opacity: 0.8;
-    color: #fcfcfe;
-}
-
-.signUp-button{
-    background-color: transparent;
-    border: 1px solid #fcfcfe;
-    border-radius: 0;
-    color: #fcfcfe;
-    padding: 10px 25px;
-    transition: all ease-out 0.5s;
-    font-size: 1.3em;
-}
-
-.signUp-button:hover{
-    background-color: #fcfcfe;
-    color: #999ede;
-}
-
-button{
-    margin-top: 10%;
-}
-
-/* ================== FOOTER STYLES =================== */
-.footer{
-    padding: 4em 0 !important;
-    margin: 0 !important;
-}
-
-.footer .grid .column{
-    text-align: center;
-}
-
