@@ -27,6 +27,12 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+//pass user data to all routes
+app.use(function(req, res, next){
+    res.locals.currentUser = req.user;
+    next();
+});
+
 app.get("/", function(req, res){
     res.render("landing");
     console.log("Home route!");
@@ -35,7 +41,7 @@ app.get("/", function(req, res){
 //================
 //Dashboard route
 //================
-app.get("/dashboard", function(req, res){
+app.get("/dashboard", isLoggedIn, function(req, res){
     res.render("dashboard");
     console.log("Authentication success, reached dashboard route!");
 });
@@ -84,6 +90,14 @@ app.get("/logout", function(req, res){
    req.logout();
    res.redirect("/");
 });
+
+//middleware checking if user is still logged in
+function isLoggedIn(req, res, next){
+    if(req.isAuthenticated()){
+        return next();
+    }
+    res.redirect("/login");
+}
 
 app.listen(app.get("port"), function(){
    console.log("Server has started at PORT:5000. Enter http://127.0.0.1:5000 or http://localhost:5000 to view")
