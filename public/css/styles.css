@@ -1,73 +1,28 @@
-.main-content{
-    background-color: #5356ad;
-    height: 90%;
+/*================*/
+/*Navbar Styles*/
+/*================*/
+.ui.inverted.segment{
+    padding: 0 !important;
 }
 
-.signUp-content{
-    background-color: #999ede;
+/*================*/
+/*SidePanel Styles*/
+/*================*/
+.sidePanelButtons{
+    margin: 0.5em;
+}
 
-    position: absolute;
+/*================*/
+/*Login Styles*/
+/*================*/
+.flex{
+    height: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.flex-item{
     width: 30%;
-    padding: 7em 0 7em 2em;
-    left: 45%;
-    top: 26%;
-    z-index: 1;
-    text-align: center;
-}
-
-
-.logIn-content{
-    background-color: #fff;
-    position: absolute;
-    padding: 10.5em 2em;
-    left: 25%;
-    top: 20%;
-    width: 23%;
-    z-index: 2;
-}
-
-.col-sm-12 h3{
-    color: #fcfcfe;
-}
-
-.navbar-inverse{
-    border-radius: 0;
-    margin: 0;
-}
-
-.logIn-button{
-    background-color: #283593;
-    padding: 10px 25px;
-    font-size: 1.2em;
-    position: absolute;
-    z-index: 1;
-    color: #fcfcfe;
-    box-shadow: 5px 0 20px grey;
-    border: none;
-    transition: all ease-in-out 0.5s;
-}
-
-.logIn-button:hover{
-    background-color: #283593;
-    opacity: 0.8;
-    color: #fcfcfe;
-}
-
-.signUp-button{
-    background-color: transparent;
-    border: 1px solid #fcfcfe;
-    border-radius: 0;
-    color: #fcfcfe;
-    padding: 10px 25px;
-    transition: all ease-out 0.5s;
-    font-size: 1.3em;
-}
-
-.signUp-button:hover{
-    background-color: #fcfcfe;
-    color: #999ede;
-}
-
-button{
-    margin-top: 10%;
+    /*flex-basis: auto;*/
+    align-self: center;
 }
